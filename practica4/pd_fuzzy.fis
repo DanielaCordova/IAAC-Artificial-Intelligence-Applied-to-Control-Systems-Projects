@@ -1,0 +1,40 @@
+[System]
+Name='pd_fuzzy'
+Type='mamdani'
+Version=2.0
+NumInputs=2
+NumOutputs=1
+NumRules=4
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='e'
+Range=[0 1]
+NumMFs=2
+MF1='N':'trapmf',[-1.5 0 0.25 0.75]
+MF2='P':'trapmf',[0.25 0.75 1 1.5]
+
+[Input2]
+Name='ce'
+Range=[0 1]
+NumMFs=2
+MF1='N':'trapmf',[-1.5 0 0.25 0.75]
+MF2='P':'trapmf',[0.25 0.75 1 1.5]
+
+[Output1]
+Name='output1'
+Range=[0 1]
+NumMFs=3
+MF1='N':'trimf',[-0.416666666666667 0 0.416666666666667]
+MF2='Z':'trimf',[0.0833333333333333 0.5 0.916666666666667]
+MF3='P':'trimf',[0.583333333333333 1 1.41666666666667]
+
+[Rules]
+2 2, 3 (1) : 1
+2 1, 2 (1) : 1
+1 2, 2 (1) : 1
+1 1, 1 (1) : 1

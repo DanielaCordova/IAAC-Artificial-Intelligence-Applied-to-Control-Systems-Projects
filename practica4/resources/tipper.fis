@@ -1,0 +1,51 @@
+[System]
+Name='prueba1'
+Type='mamdani'
+Version=2.0
+NumInputs=3
+NumOutputs=1
+NumRules=8
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='e'
+Range=[-1 1]
+NumMFs=2
+MF1='negativo':'trapmf',[-1.716 -1.079 -0.5 0.5]
+MF2='positivo':'trapmf',[-0.5 0.5 1 1]
+
+[Input2]
+Name='ie'
+Range=[-1 1]
+NumMFs=2
+MF1='negativo':'trapmf',[-1.716 -1.079 -0.5 0.5]
+MF2='positivo':'trapmf',[-0.5 0.5 1 1]
+
+[Input3]
+Name='de'
+Range=[-1 1]
+NumMFs=2
+MF1='negativo':'trapmf',[-1.716 -1.079 -0.5 0.5]
+MF2='positivo':'trapmf',[-0.5 0.5 1 1]
+
+[Output1]
+Name='control'
+Range=[0 1]
+NumMFs=3
+MF1='negativo':'trimf',[-0.4 0 0.4]
+MF2='intermedio':'trimf',[0.1 0.5 0.9]
+MF3='positivo':'trimf',[0.6 1 1.4]
+
+[Rules]
+1 1 1, 1 (1) : 1
+1 1 2, 1 (1) : 1
+1 2 1, 1 (1) : 1
+1 2 2, 2 (1) : 1
+2 1 1, 2 (1) : 1
+2 2 1, 3 (1) : 1
+2 1 2, 3 (1) : 1
+2 2 2, 3 (1) : 1

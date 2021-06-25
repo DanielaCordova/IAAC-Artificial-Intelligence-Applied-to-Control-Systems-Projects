@@ -1,0 +1,51 @@
+[System]
+Name='fozzyPDI'
+Type='mamdani'
+Version=2.0
+NumInputs=3
+NumOutputs=1
+NumRules=8
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='error'
+Range=[-0.35 1]
+NumMFs=2
+MF1='N':'trapmf',[-10.5 -1 0 0.75]
+MF2='P':'trapmf',[0 0.75 1 1.5]
+
+[Input2]
+Name='der'
+Range=[-0.3 0.2]
+NumMFs=2
+MF1='N':'trapmf',[-1.05 -0.3 -0.153 0.100105708245243]
+MF2='P':'trapmf',[-0.145 0.0831923890063425 0.25 0.65]
+
+[Input3]
+Name='inte'
+Range=[0 1.4]
+NumMFs=2
+MF1='N':'trapmf',[-1.26 -0.14 0.3034 1.05]
+MF2='P':'trapmf',[0.3449 1.026 1.54 2.66]
+
+[Output1]
+Name='output1'
+Range=[0 2]
+NumMFs=3
+MF1='N':'trapmf',[-0.9 -0.1 0.285412262156448 0.9]
+MF2='Z':'trapmf',[0.1 0.9 1.1 1.9]
+MF3='P':'trapmf',[1.1 1.63002114164905 2.1 2.9]
+
+[Rules]
+1 1 1, 1 (1) : 1
+1 2 1, 1 (1) : 1
+1 1 2, 1 (1) : 1
+1 2 2, 2 (1) : 1
+2 1 1, 2 (1) : 1
+2 1 2, 3 (1) : 1
+2 2 1, 3 (1) : 1
+2 2 2, 3 (1) : 1

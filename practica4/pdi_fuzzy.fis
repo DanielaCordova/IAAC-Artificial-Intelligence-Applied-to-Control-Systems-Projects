@@ -1,0 +1,51 @@
+[System]
+Name='pdi_fuzzy'
+Type='mamdani'
+Version=2.0
+NumInputs=3
+NumOutputs=1
+NumRules=8
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='e'
+Range=[0 1]
+NumMFs=2
+MF1='N':'trapmf',[-1.5 0 0.25 0.75]
+MF2='P':'trapmf',[0.25 0.75 1 1.5]
+
+[Input2]
+Name='de'
+Range=[0 1]
+NumMFs=2
+MF1='N':'trapmf',[-1.5 0 0.25 0.75]
+MF2='P':'trapmf',[0.25 0.75 1 1.5]
+
+[Input3]
+Name='ie'
+Range=[0 1]
+NumMFs=2
+MF1='N':'trapmf',[-1.5 0 0.25 0.75]
+MF2='P':'trapmf',[0.25 0.75 1 1.5]
+
+[Output1]
+Name='control'
+Range=[0 1]
+NumMFs=3
+MF1='N':'trapmf',[-1 0 0.25 0.5]
+MF2='Z':'trimf',[0.25 0.5 0.75]
+MF3='P':'trapmf',[0.5 0.75 1 1.5]
+
+[Rules]
+1 1 1, 1 (1) : 1
+1 1 2, 1 (1) : 1
+1 2 1, 1 (1) : 1
+1 2 2, 2 (1) : 1
+2 1 1, 2 (1) : 1
+2 2 1, 3 (1) : 1
+2 1 2, 3 (1) : 1
+2 2 2, 3 (1) : 1

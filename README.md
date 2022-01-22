@@ -19,7 +19,7 @@ Matlab's cftool or basic fitting.
 
 ## Práctica 2: PID Controller
 
-Project for the construction of
+Project aimed at the construction of 
 different PID controllers based on different systems to control.
 
 ## License

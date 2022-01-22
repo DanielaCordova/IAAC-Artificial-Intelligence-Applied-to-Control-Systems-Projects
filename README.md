@@ -17,7 +17,7 @@ By means of some calculation computer program,
 identify a system whose input and output data are known using
 Matlab's cftool or basic fitting. 
 
-## Práctica 2: Control PID
+## Práctica 2: PID Controller
 
 Project for the construction of
 different PID controllers based on different systems to control.

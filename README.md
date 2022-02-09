@@ -17,7 +17,7 @@ By means of some calculation computer program,
 identify a system whose input and output data are known using
 Matlab's cftool or basic fitting. 
 
-Proyect: [here](https://github.com/DanielaCordova/Artificial-Intelligence-Applied-to-Control-Systems-Projects/tree/main/Practica1#readme)
+Project: [here](https://github.com/DanielaCordova/Artificial-Intelligence-Applied-to-Control-Systems-Projects/tree/main/Practica1#readme)
 
 ## PRACTICE 2: PID Controller
 
@@ -26,7 +26,7 @@ The goal of this project was to construct PID controllers and learn how they wor
 Using Matlab/Simulink, identify an open-loop system and use the model 
 parameters to tune a closed-loop PID controller. Use the “system” simulink block, supplied inside the “plant” simulink model (plant.zip).
 
-Proyect: [here](https://github.com/DanielaCordova/Artificial-Intelligence-Applied-to-Control-Systems-Projects/tree/main/practica2#readme)
+Project: [here](https://github.com/DanielaCordova/Artificial-Intelligence-Applied-to-Control-Systems-Projects/tree/main/practica2#readme)
 
 ## PRACTICE 3: Expert Control Systems
 
@@ -36,7 +36,7 @@ Automatically improve the qualitative tuning of the parameters of a
 PID controller through an expert system whose inference engine is formed
 by a set of rules obtained from experience.
 
-Proyect: [here](https://github.com/DanielaCordova/Artificial-Intelligence-Applied-to-Control-Systems-Projects/tree/main/practica3#readme)
+Project: [here](https://github.com/DanielaCordova/Artificial-Intelligence-Applied-to-Control-Systems-Projects/tree/main/practica3#readme)
 
 ## PRACTICE 4: Fuzzy Control
 
